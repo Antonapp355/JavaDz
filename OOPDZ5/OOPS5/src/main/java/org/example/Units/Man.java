@@ -52,7 +52,7 @@ public abstract class Man implements GameInterface {
     //Поиск минимальной дистанции.
     protected int findNearest(List<Man> team2){
         double min = 100;
-        int index = 0;
+        int index = -1;
         for (int i = 0; i < team2.size(); i++) {
             //Если его дистанция меньше минимального значения и противник не мёртв
             if (min > coords.getDistance(team2.get(i).coords) & !team2.get(i).state.equals("Die")) {
@@ -63,16 +63,6 @@ public abstract class Man implements GameInterface {
         return index;
     }
 
-    protected int findNearestForMag(List<Man> team2){
-        int index = 0;
-        for (int i = 0; i < team2.size(); i++) {
-            //Если его дистанция меньше минимального значения и юнит не мёртв и здоровье меньше максимального здоровья
-            if (team2.get(i).health < team2.get(i).maxHealth) {
-                index = i;
-            }
-        }
-        return index;
-    }
 
     protected void getDamage(float damage){
         health-=damage;

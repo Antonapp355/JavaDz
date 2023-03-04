@@ -29,10 +29,10 @@ public class Monk extends Man {
         if(state.equals("Die")) return;
         //Ищем самого ближайшего союзника
         for (int i = 0; i < team1.size(); i++) {
-            if (team1.get(i).health<team1.get(i).maxHealth){
+            if (team1.get(i).health<team1.get(i).maxHealth & !team1.get(i).state.equals("Die")){
                 //Лечим
                 team1.get(i).getDamage(damageMax);
-            }
+            }else return;
         }
     }
 

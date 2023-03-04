@@ -29,10 +29,10 @@ public class Mag extends Man{
         if(state.equals("Die")) return;
         //Ищем самого ближайшего союзника
         for (int i = 0; i < team2.size(); i++) {
-            if (team2.get(i).health<team2.get(i).maxHealth){
+            if (team2.get(i).health<team2.get(i).maxHealth & !team2.get(i).state.equals("Die")){
                 //Лечим
                 team2.get(i).getDamage(damageMax);
-            }
+            }else return;
         }
     }
 

@@ -29,6 +29,7 @@ public class Sniper extends Man{
         if (state.equals("Die") || shots == 0) return;
         //Ищем самого ближайшего противника
         int index = findNearest(team1);
+        if (index == -1) return;
         //В повреждение будет записано damageMin еслизащита противника больше моей атаки если защита противника меньше моей атаки в повреждение запишется damageMax иначе запишется среднее повреждение
         //Это атака
         float damage = (team1.get(index).armor - attack > 0) ?
