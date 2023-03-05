@@ -15,12 +15,7 @@ public class Spearman extends Man{
                 1,
                 3,
                 5,
-                4,
-                4,
-                0,
-                0,
-                0,
-                0);
+                4);
     }
 
     @Override

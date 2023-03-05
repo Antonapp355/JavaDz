@@ -2,7 +2,7 @@ package org.example.Units;
 
 import java.util.*;
 
-public class Crossbowman extends Man{
+public class Crossbowman extends Shooter{
 
     public Crossbowman() {
         super("Stand",
@@ -16,10 +16,7 @@ public class Crossbowman extends Man{
                 3,
                 4,
                 6,
-                16,
-                0,
-                0,
-                0);
+                16);
     }
 
     @Override

@@ -4,23 +4,24 @@ import java.util.List;
 import java.util.Random;
 
 public class Farmer extends Man {
+    protected int delivery;
 
+    public Farmer(String state, int maxHealth, int posX, int posY, String name, int health, int damageMin, int damageMax, int armor, int speed, int attack, int delivery) {
+        super(state, maxHealth, posX, posY, name, health, damageMin, damageMax, armor, speed, attack);
+        this.delivery = delivery;
+    }
 
-    public Farmer(){
+    public Farmer() {
         super("Stand",
                 1,
                 0,
                 0,
                 String.valueOf(Names.values()[new Random().nextInt(0,Names.values().length-1)]),
                 1,
-                0,
+                1,
                 1,
                 1,
                 3,
-                1,
-                0,
-                0,
-                0,
                 1);
     }
 

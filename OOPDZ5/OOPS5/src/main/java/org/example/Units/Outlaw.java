@@ -16,12 +16,7 @@ public class Outlaw extends Man{
                 2,
                 4,
                 3,
-                6,
-                8,
-                0,
-                0,
-                0,
-                0);
+                6);
     }
 
     @Override

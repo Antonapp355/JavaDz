@@ -3,7 +3,7 @@ package org.example.Units;
 import java.util.List;
 import java.util.Random;
 
-public class Mag extends Man{
+public class Mag extends Magic{
 
     public Mag() {
         super("Stand",
@@ -17,10 +17,7 @@ public class Mag extends Man{
                 12,
                 9,
                 17,
-                0,
-                0,
-                1,
-                0);
+                1);
     }
 
     @Override

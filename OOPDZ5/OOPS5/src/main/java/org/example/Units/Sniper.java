@@ -3,7 +3,7 @@ package org.example.Units;
 import java.util.List;
 import java.util.Random;
 
-public class Sniper extends Man{
+public class Sniper extends Shooter{
 
     public Sniper() {
         super("Stand",
@@ -17,10 +17,7 @@ public class Sniper extends Man{
                 10,
                 9,
                 12,
-                32,
-                0,
-                0,
-                0);
+                32);
     }
 
     @Override

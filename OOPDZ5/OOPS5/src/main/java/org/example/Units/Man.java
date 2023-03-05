@@ -11,13 +11,11 @@ public abstract class Man implements GameInterface {
     protected int maxHealth;
     String name;
     protected int health,damageMin,damageMax,armor,speed;
-    protected int attack,shots;
-    int ammunition;
-    protected int mana,delivery;
     protected Vector2D coords;
+    protected int attack;
 
 
-    public Man(String state, int maxHealth, int posX, int posY, String name, int health, int damageMin, int damageMax, int armor, int speed, int attack, int shots, int ammunition, int mana, int delivery) {
+    public Man(String state, int maxHealth, int posX, int posY, String name, int health, int damageMin, int damageMax, int armor, int speed, int attack) {
         coords = new Vector2D(posX,posY);
         this.state = state;
         this.maxHealth = maxHealth;
@@ -28,10 +26,6 @@ public abstract class Man implements GameInterface {
         this.armor = armor;
         this.speed = speed;
         this.attack = attack;
-        this.shots = shots;
-        this.ammunition = ammunition;
-        this.mana = mana;
-        this.delivery = delivery;
     }
 
     @Override
@@ -75,10 +69,8 @@ public abstract class Man implements GameInterface {
                 "\t\tСостояние: "+ state +
                 "\t\tЗдоровье: "+ health +
                 "\t\tБроня: " + armor +
-                "\t\tАтака: " + attack +
                 "\t\tУрон min: " + damageMin +
                 "\t\tУрон max: " + damageMax +
-                "\t\tВыстрелы: "+ shots +
                 "\t\tКоординаты: (X:"+ coords.posX+"; Y:"+ coords.posY+")";
     }
 }

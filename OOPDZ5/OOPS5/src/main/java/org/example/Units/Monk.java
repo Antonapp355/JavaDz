@@ -3,8 +3,7 @@ package org.example.Units;
 import java.util.List;
 import java.util.Random;
 
-public class Monk extends Man {
-
+public class Monk extends Magic {
     public Monk() {
         super("Stand",
                 30,
@@ -17,10 +16,7 @@ public class Monk extends Man {
                 7,
                 5,
                 12,
-                0,
-                0,
-                1,
-                0);
+                1);
     }
 
     @Override
